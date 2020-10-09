@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.min.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header id='header'>
+        拉勾网
+    </header>
+
+    
+    <!-- shuju -->
+    <div id="content">
+        <div class="custom-info" style="display: block;">
+            <span class='info'>10秒定制职位</span>
+            <a class="go" href="./login.html">
+                <span class="text">去登录</span>
+            </a>
+        </div>
+        
+        <div id='app'>
+                <div v-for="item in datalist" class='box0'>
+                    <div class="box1">
+                        <div class="box3">
+                            <img src="../img/1.png" alt="">
+                        </div>
+                        
+                        <div class="box2">
+                            <h2>
+                                {{item.companyFullName}}
+                            </h2>
+                            <p class="item-pos"><span>{{item.positionName}}</span>&nbsp;&nbsp;<span>[{{item.city}}]</span></p>
+
+                            <span>{{item.createTime}}</span>
+                        </div>
+                        <div class="box4">
+                            <span>{{item.salary}}</span>
+                        </div>
+                    </div>   
+                </div> 
+        </div>
+    </div>
+    <!-- footer --> 
+    <div class="footer">
+        <p class="p1">&copy;2020&nbsp;&nbsp;lagou.com,all&nbsp;right&nbsp;reserved</p>
+        <p class="p2"><a href="./index.html">移动版</a>&nbsp;&nbsp;<a href="./index.html">电脑版</a>&nbsp;&nbsp;<a href="./index.html">回顶部</a></p>
+    </div>
+<!-- guding -->
+    <div class="gd">
+        <a href="./index.html">职位</a>
+        <a href="./ss.html">搜索</a>
+        <a href="./my.html">我的</a>
+    </div>
+
+    <script src="../js/index.min.js"></script>
+</body>
+</html>
